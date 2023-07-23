@@ -218,7 +218,7 @@ a:focus {
   background-position: center center;
   background-size: 8px;
   top: initial;
-  bottom: -100px;
+  bottom: -50px;
 }
 
 .carousel-control-prev:hover,
