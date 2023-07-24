@@ -347,8 +347,9 @@ a:focus {
   font-family: 'Poppins', sans-serif;
 }
 
+/* Estilo para la imagen de fondo en pantallas grandes */
 .welcome_section::before {
-  content: "";
+  content: "flex-bo";
   width: 40%;
   height: 100%;
   background-image: url(../imagen/Centrop.png);
@@ -357,6 +358,15 @@ a:focus {
   right: 0;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  .welcome_section::before {
+    width: 100%; /* Cambia el ancho al 100% en pantallas pequeñas */
+    height: 200px; /* Ajusta la altura según tus necesidades */
+    background-size: cover;
+  }
 }
 
 /* end welcome section */
