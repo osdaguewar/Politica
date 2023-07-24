@@ -20,15 +20,17 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  
 }
 
 /* Estilo de las imágenes */
 .imagen-galeria {
   width: 200px;
-  height: 150px;
+  height: 250px;
+  margin: 0.5%;
   object-fit: cover;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.1s ease;
 }
 
 /* Estilo cuando se hace hover sobre las imágenes */
@@ -36,7 +38,8 @@
   transform: scale(1.1);
 }
 .practice_section {
-  background-color: rgb(97, 97, 241); 
+  background-image: url(../imagen/Sinu.jpg);
+  
 }
 
 /* Estilo para el modal */
@@ -58,7 +61,7 @@
     max-width: 50%; /* Ajusta el ancho máximo del contenido del modal */
     max-height: 100%; /* Ajusta la altura máxima del contenido del modal */
     margin: auto;
-    display: inline-block;
+    display: flex;
   }
 
   /* Estilo para el botón de cerrar el modal */
@@ -141,7 +144,7 @@
   </div>
   <!-- end header section -->
 
-
+  
   <!-- practice section -->
   <section class="practice_section layout_padding">
     <div class="container">
@@ -289,7 +292,7 @@
       const modalImagen = document.getElementById('imagenModal');
   
       modalImagen.src = rutaImagen;
-      modal.style.display = 'block';
+      modal.style.display = 'flex';
     }
   
     // Función para cerrar el modal

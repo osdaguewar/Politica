@@ -13,29 +13,29 @@ h4 {
 }
 
 .layout_padding {
-  padding: 75px 0;
+  padding: 5% 0;
 }
 
 .layout_padding2 {
-  padding: 45px 0;
+  padding: 3% 0;
 }
 
 .layout_padding2-top {
-  padding-top: 45px;
+  padding-top: 5%;
 }
 
 .layout_padding-top {
-  padding-top: 75px;
+  padding-top: 5%;
 }
 
 .layout_padding-bottom {
-  padding-bottom: 75px;
+  padding-bottom: 5%;
 }
 
 .call_to-btn {
   display: inline-block;
-  padding: 12px 32px;
-  border-radius: 15px;
+  padding: 1% 3%;
+  border-radius: 5%;
   background-color: #3c8bf3;
   color: #fff;
   display: flex;
@@ -45,9 +45,9 @@ h4 {
 
 .call_to-btn img,
 .sub_call_to-btn img {
-  width: 9px;
-  margin-left: 15px;
-  margin-top: 3px;
+  width: 1%;
+  margin-left: 2%;
+  margin-top: 2%;
 }
 
 .call_to-btn:hover,
@@ -117,18 +117,18 @@ a:focus {
 
 .custom_nav-container .nav_search-btn {
   background-image: url(../imagen/search-icon.png);
-  background-size: 22px;
+  background-size: 10%;
   background-repeat: no-repeat;
   background-position-y: 7px;
-  width: 35px;
-  height: 35px;
+  width: 3%;
+  height: 3%;
   padding: 0;
   border: none;
 }
 
 .navbar-brand,
 .navbar-brand:hover {
-  font-size: 30px;
+  font-size: 3%;
   color: #3c8bf3;
   font-weight: bold;
 }
@@ -209,8 +209,8 @@ a:focus {
 
 .carousel-control-prev,
 .carousel-control-next {
-  width: 45px;
-  height: 45px;
+  width: 5.5%;
+  height: 13%;
   border-radius: 100%;
   background-color: #3c8bf3;
   opacity: 1;
@@ -218,7 +218,7 @@ a:focus {
   background-position: center center;
   background-size: 8px;
   top: initial;
-  bottom: -50px;
+  bottom: -15%;
 }
 
 .carousel-control-prev:hover,
@@ -255,7 +255,7 @@ a:focus {
 }
 
 .about_detail-box p {
-  margin: 45px 0;
+  margin: 15% 0;
 }
 
 /* end about section */
