@@ -474,7 +474,11 @@ a:focus {
 
 /* end info section */
 
-
+nav{
+  background-color:rgb(205, 205, 252);
+  }
+  div.container-fluid{
+      background-color:rgb(205, 205, 252);}
 
 /* footer section*/
 
