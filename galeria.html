@@ -14,7 +14,70 @@
 
   <title>AD</title>
 
+<style>
+    /* Estilo del contenedor de la galería */
+#galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
+/* Estilo de las imágenes */
+.imagen-galeria {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+/* Estilo cuando se hace hover sobre las imágenes */
+.imagen-galeria:hover {
+  transform: scale(1.1);
+}
+.practice_section {
+  background-color: rgb(97, 97, 241); 
+}
+nav{
+background-color:rgb(205, 205, 252);
+}
+div.container-fluid{
+    background-color:rgb(205, 205, 252);
+}
+/* Estilo para el modal */
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    padding-top: 20px;
+    left: 0;
+    top: 0;
+    width: 70%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* Estilo para el contenido del modal (imagen) */
+  .modal-content {
+    max-width: 50%; /* Ajusta el ancho máximo del contenido del modal */
+    max-height: 100%; /* Ajusta la altura máxima del contenido del modal */
+    margin: auto;
+    display: inline-block;
+  }
+
+  /* Estilo para el botón de cerrar el modal */
+  .close {
+    color:black;
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    cursor: pointer;
+  }
+
+</style>
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -71,7 +134,6 @@
                   <a class="nav-link" href="galeria.html">Galeria</a>
                 </li>
 
-
               </ul>
               <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
@@ -85,38 +147,20 @@
   <!-- end header section -->
 
 
-  <!-- about section -->
-  <section class="about_section layout_padding">
+  <!-- practice section -->
+  <section class="practice_section layout_padding">
     <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="about_detail-box">
-            <h3 class="text-uppercase">
-              Lo que soy
-            </h3>
-            <p>
-              Álvaro Daniel Cabrales es un joven ganadero y exconcejal con una sólida tradición política familiar en Montería, Córdoba. Con una visión centrada en el apoyo a las culturas ancestrales y étnicas de la región, busca preservar y promover el patrimonio cultural local. Su experiencia en el campo y su compromiso con la educación lo impulsan a luchar por el desarrollo del sector agrícola y mejorar la calidad educativa en la comunidad. Cabrales es un candidato comprometido, con propuestas frescas y un enfoque en el progreso de Montería.
-            </p>
-            <div class="d-flex justify-content-center justify-content-sm-start">
-              <a href="" class="sub_call_to-btn ">
-                <span>
-                  Leer mas 
-                </span>
-                <img src="imagen/right-arrow.png" alt="">
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="about_img-box">
-            <img src="imagen/SobreMi.png" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
+      <div class="d-flex flex-column align-items-center">
+        <div id="galeria">
+            <!-- Modal -->
+<div id="modal" class="modal">
+    <span class="close" onclick="cerrarModal()">&times;</span>
+    <img class="modal-content" id="imagenModal">
+  </div>
   </section>
 
-  <!-- end about section -->
+
+  <!-- end practice section -->
 
   <!-- info section -->
   <section class="info_section">
@@ -146,7 +190,7 @@
         </div>
         <div class="col-md-4 info_news">
           <h5>
-            Boletin informativo Newsletter
+            Boletin informativo
           </h5>
           <form action="">
             <div>
@@ -166,30 +210,32 @@
         <div class="info_social">
           <div>
             <a href="https://www.facebook.com/alvaro.cabrales.7" target="_blank">
-              <img src="imagen/fb.png" alt="">
+              <img src="images/fb.png" alt="">
            </a>
           </div>
           <div>
             <a href="" target="_blank">
-              <img src="imagen/twitter.png" alt="">
+              <img src="images/twitter.png" alt="">
            </a>
           </div>
           <div>
             <a href="" target="_blank">
-              <img src="imagen/linkedin.png" alt="">
+              <img src="images/linkedin.png" alt="">
            </a>
           </div>
           <div>
             <a href="https://www.instagram.com/alvarodanielcv/" target="_blank">
-                <img src="imagen/insta.png" alt="">
+                <img src="images/insta.png" alt="">
             </a>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- endsss info section -->
 
+
+
+  <!-- endsss info section -->
   <!-- end contact section -->
 
   <!-- footer section -->
@@ -204,8 +250,63 @@
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <!-- progreesbar script -->
-
+  <!--Script galeria-->
+  <script>
+    // Arreglo con las URL de las imágenes
+    const imagenes = [
+      'imagen/1.png',
+      'imagen/2.png',
+      'imagen/3.png',
+      'imagen/4.png',
+      'imagen/5.png',
+      'imagen/6.png',
+      'imagen/7.png',
+      'imagen/8.png',
+      'imagen/9.png',
+      'imagen/10.png',
+      'imagen/11.png',
+      'imagen/12.png',
+      'imagen/13.png',
+      'imagen/2.png',
+      'imagen/3.png',
+      // Agrega más rutas de imágenes aquí
+    ];
+  
+    // Función para cargar las imágenes en la galería
+    function cargarGaleria() {
+      const galeria = document.getElementById('galeria');
+  
+      imagenes.forEach((imagen) => {
+        const img = document.createElement('img');
+        img.src = imagen;
+        img.alt = 'Imagen de la galería';
+        img.classList.add('imagen-galeria');
+        galeria.appendChild(img);
+  
+        // Agrega un listener para mostrar la imagen ampliada al hacer clic
+        img.addEventListener('click', () => mostrarImagenAmpliada(imagen));
+      });
+    }
+  
+    // Función para mostrar la imagen ampliada en el modal
+    function mostrarImagenAmpliada(rutaImagen) {
+      const modal = document.getElementById('modal');
+      const modalImagen = document.getElementById('imagenModal');
+  
+      modalImagen.src = rutaImagen;
+      modal.style.display = 'block';
+    }
+  
+    // Función para cerrar el modal
+    function cerrarModal() {
+      const modal = document.getElementById('modal');
+      modal.style.display = 'none';
+    }
+  
+    // Llamamos a la función para cargar la galería cuando la página se carga completamente.
+    window.addEventListener('load', cargarGaleria);
   </script>
+
 </body>
 
 </html>

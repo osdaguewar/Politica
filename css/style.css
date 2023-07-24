@@ -116,7 +116,7 @@ a:focus {
 
 
 .custom_nav-container .nav_search-btn {
-  background-image: url(../images/search-icon.png);
+  background-image: url(../imagen/search-icon.png);
   background-size: 22px;
   background-repeat: no-repeat;
   background-position-y: 7px;
@@ -145,7 +145,7 @@ a:focus {
 }
 
 .custom_nav-container .navbar-toggler .navbar-toggler-icon {
-  background-image: url(../images/menu.png);
+  background-image: url(../imagen/menu.png);
   background-size: 55px;
 }
 
@@ -229,12 +229,12 @@ a:focus {
 
 
 .carousel-control-prev {
-  background-image: url(../images/left-arrow.png);
+  background-image: url(../imagen/left-arrow.png);
   left: 45px;
 }
 
 .carousel-control-next {
-  background-image: url(../images/right-arrow.png);
+  background-image: url(../imagen/right-arrow.png);
   left: 95px;
 }
 
@@ -351,7 +351,7 @@ a:focus {
   content: "";
   width: 40%;
   height: 100%;
-  background-image: url(../images/Centrop.png);
+  background-image: url(../imagen/Centrop.png);
   position: absolute;
   top: 0;
   right: 0;
