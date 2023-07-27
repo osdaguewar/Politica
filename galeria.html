@@ -11,6 +11,9 @@
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="author" content="" />
+  <!-- Enlace a la versión local de jQuery (si la instalaste con npm) -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <link href="path/to/lightbox.css" rel="stylesheet" />
 
   <title>AD</title>
 
@@ -248,6 +251,7 @@
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
+  
   <!-- progreesbar script -->
   <!--Script galeria-->
   <script>
@@ -271,21 +275,22 @@
       // Agrega más rutas de imágenes aquí
     ];
   
+   
     // Función para cargar las imágenes en la galería
-    function cargarGaleria() {
-      const galeria = document.getElementById('galeria');
-  
-      imagenes.forEach((imagen) => {
-        const img = document.createElement('img');
-        img.src = imagen;
-        img.alt = 'Imagen de la galería';
-        img.classList.add('imagen-galeria');
-        galeria.appendChild(img);
-  
-        // Agrega un listener para mostrar la imagen ampliada al hacer clic
-        img.addEventListener('click', () => mostrarImagenAmpliada(imagen));
-      });
-    }
+  function cargarGaleria() {
+    const galeria = document.getElementById('galeria');
+
+    imagenes.forEach((imagen) => {
+      const img = document.createElement('img');
+      img.src = imagen;
+      img.alt = 'Imagen de la galería';
+      img.classList.add('imagen-galeria', 'lightbox'); // Agregamos la clase "lightbox" aquí
+      galeria.appendChild(img);
+
+      // Agrega un listener para mostrar la imagen ampliada al hacer clic
+      img.addEventListener('click', () => mostrarImagenAmpliada(imagen));
+    });
+  }
   
     // Función para mostrar la imagen ampliada en el modal
     function mostrarImagenAmpliada(rutaImagen) {
@@ -305,7 +310,11 @@
     // Llamamos a la función para cargar la galería cuando la página se carga completamente.
     window.addEventListener('load', cargarGaleria);
   </script>
-
+  <script src="path/to/lightbox.js"></script>
+<script>
+  // Inicializar Lightbox
+  const lightbox = new Lightbox('.lightbox');
+</script>
 </body>
 
 </html>

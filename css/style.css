@@ -509,3 +509,29 @@ nav{
 }
 
 /* end footer section*/
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  /* Agrega aquí los estilos que deseas aplicar para pantallas de hasta 768px */
+  /* Por ejemplo: */
+  
+  .hero_section-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero_img-box {
+    width: 80%;
+  }
+
+  .hero_detail-box {
+    width: 80%;
+  }
+
+  .carousel-control-prev {
+    left: 15px;
+  }
+
+  .carousel-control-next {
+    left: 65px;
+  }
+}

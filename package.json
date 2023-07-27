@@ -1,0 +1,23 @@
+{
+  "name": "politica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/osdaguewar/Politica.git"
+  },
+  "author": "Oscar Guerra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/osdaguewar/Politica/issues"
+  },
+  "homepage": "https://github.com/osdaguewar/Politica#readme",
+  "dependencies": {
+    "jquery": "^3.7.0",
+    "lightbox2": "^2.11.4"
+  }
+}
