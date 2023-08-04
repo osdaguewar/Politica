@@ -83,7 +83,7 @@ nav.navbar.navbar-expand-lg {}
 
 .custom_nav-container.navbar-expand-lg .navbar-nav .nav-link {
   padding: 10px 20px;
-  color: #3c8bf3;
+  color:black;
   text-align: center;
   text-transform: uppercase;
 }
