@@ -157,6 +157,24 @@ a:focus {
   margin: 0 auto;
   display: flex;
   align-items: center;
+  position: relative; /* Agregar esta propiedad para posicionar el pseudoelemento */
+}
+
+/* Pseudoelemento ::before para aplicar opacidad a la imagen de fondo */
+.hero_section-container::before {
+  content: ""; /* Necesario para que el pseudoelemento funcione */
+  position: absolute; /* Posicionamos el pseudoelemento por encima del contenido */
+  top: 20%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  background-image: url('../imagen/MarcaAgua.jpg');
+  opacity: 0.3; /* Valor entre 0 (completamente transparente) y 1 (completamente opaco) */
+  z-index: -1; /* Enviamos el pseudoelemento detrás del contenido del contenedor */
+  
+  /* Otras propiedades opcionales para personalizar el fondo */
+  background-repeat: no-repeat; /* Para evitar que se repita la imagen */
+  background-position: center; /* Para centrar la imagen en el contenedor */
 }
 
 .number-container {
@@ -349,13 +367,13 @@ a:focus {
 
 /* Estilo para la imagen de fondo en pantallas grandes */
 .welcome_section::before {
-  content: "flex-bo";
-  width: 40%;
-  height: 100%;
-  background-image: url(../imagen/Centrop.png);
+  content: "";
+  width: 50%;
+  height: 45%;
+  background-image: url(../imagen/perfilalvaro.png);
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 20%;
+  right:1%;
   background-repeat: no-repeat;
   background-size: cover;
 }
