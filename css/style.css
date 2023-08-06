@@ -175,6 +175,12 @@ a:focus {
   /* Otras propiedades opcionales para personalizar el fondo */
   background-repeat: no-repeat; /* Para evitar que se repita la imagen */
   background-position: center; /* Para centrar la imagen en el contenedor */
+  @media (max-width: 768px) {
+    top: 10%; /* Ajusta la posición superior en dispositivos móviles */
+    width: 80%; /* Ajusta el ancho en dispositivos móviles */
+    height: 30%; /* Ajusta la altura en dispositivos móviles */
+    opacity: 0.5; /* Cambia la opacidad en dispositivos móviles si lo deseas */
+  }
 }
 
 .number-container {
@@ -372,17 +378,15 @@ a:focus {
   height: 45%;
   background-image: url(../imagen/perfilalvaro.png);
   position: absolute;
-  top: 20%;
-  right:1%;
-  background-repeat: no-repeat;
-  background-size: cover;
+  top: 15%;
+  right: 1%;
 }
 
 /* Media query para dispositivos móviles */
 @media (max-width: 768px) {
   .welcome_section::before {
-    width: 100%; /* Cambia el ancho al 100% en pantallas pequeñas */
-    height: 200px; /* Ajusta la altura según tus necesidades */
+    width: 50%; /* Cambia el ancho al 100% en pantallas pequeñas */
+    height: 45%;; /* Ajusta la altura según tus necesidades */
     background-size: cover;
   }
 }
