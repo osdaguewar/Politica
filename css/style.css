@@ -558,9 +558,26 @@ nav{
   }
 }
 
-audio{
-  right: 20%;
-  margin-top: 10%;
-  width: 200px;
-  height: 30px;
+/* Estilos para el reproductor de audio */
+#AudioAD {
+  width: 90%;
+  max-width: 200px;
+  margin: 0 auto;
+  
+}
+
+/* Estilos para los controles del reproductor */
+#AudioAD::-webkit-media-controls-panel {
+  background-color: #0000FF;
+  border-radius: 10px;
+
+}
+
+#AudioAD::-webkit-media-controls-play-button,
+#AudioAD::-webkit-media-controls-pause-button {
+  font-size: 24px;
+}
+
+#AudioAD::-webkit-media-controls-volume-slider {
+  width: 60%;
 }
