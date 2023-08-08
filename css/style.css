@@ -557,3 +557,10 @@ nav{
     left: 65px;
   }
 }
+
+audio{
+  right: 20%;
+  margin-top: 10%;
+  width: 200px;
+  height: 30px;
+}
