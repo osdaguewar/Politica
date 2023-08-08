@@ -174,7 +174,7 @@ a:focus {
   
   /* Otras propiedades opcionales para personalizar el fondo */
   background-repeat: no-repeat; /* Para evitar que se repita la imagen */
-  background-position: center; /* Para centrar la imagen en el contenedor */
+  background-position:center; /* Para centrar la imagen en el contenedor */
   @media (max-width: 768px) {
     top: 10%; /* Ajusta la posición superior en dispositivos móviles */
     width: 80%; /* Ajusta el ancho en dispositivos móviles */
