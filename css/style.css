@@ -560,10 +560,9 @@ nav{
 
 /* Estilos para el reproductor de audio */
 #AudioAD {
-  width: 90%;
+  width: 50%;
   max-width: 200px;
-  margin: 0 auto;
-  
+  margin: 1 auto;  
 }
 
 /* Estilos para los controles del reproductor */
