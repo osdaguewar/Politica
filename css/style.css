@@ -77,15 +77,31 @@ h4 {
   font-family: 'Poppins', sans-serif;
 }
 
-.header_section {}
+.header_section {
+ 
+}
 
-nav.navbar.navbar-expand-lg {}
+nav.navbar.navbar-expand-lg {
+  background-image: url('/imagen/navbconcejo.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.9; /* Ajusta el valor de opacidad según tus preferencias */
+}
 
 .custom_nav-container.navbar-expand-lg .navbar-nav .nav-link {
   padding: 10px 20px;
   color:black;
   text-align: center;
   text-transform: uppercase;
+}
+
+.custom_nav-container.navbar-expand-lg .navbar-nav .nav-link:hover {
+  background-color: rgba(62, 4, 221, 0.1);
+  border: 1px solid rgba(47, 17, 218, 0.3);
+  border-radius: 20%;
+  /* Agregar una transición de opacidad para que el cambio sea suave */
+  transition: background-color 0.3s, border-color 0.3s, opacity 0.3s;
 }
 
 
@@ -562,7 +578,7 @@ nav{
 #AudioAD {
   width: 50%;
   max-width: 200px;
-  margin: 1 auto;  
+  margin: 1 auto;   
 }
 
 /* Estilos para los controles del reproductor */

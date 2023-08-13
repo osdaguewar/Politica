@@ -14,73 +14,72 @@
   <!-- Enlace a la versión local de jQuery (si la instalaste con npm) -->
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <link href="path/to/lightbox.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <title>AD</title>
 
 <style>
-    /* Estilo del contenedor de la galería */
-#galeria {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  
+  .grid-gallery {
+  display: grid;
+  grid-auto-rows: 200px;
+  gap: 1rem;
+  grid-auto-flow: row dense;
 }
 
-/* Estilo de las imágenes */
-.imagen-galeria {
-  width: 200px;
-  height: 250px;
-  margin: 1%;
+@media all and (min-width: 320px) {
+  .grid-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media all and (min-width: 768px) {
+  .grid-gallery {
+    grid-template-columns: repeat(3, 3fr);
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .grid-gallery {
+    grid-template-columns: repeat(6, 2fr);
+  }
+}
+
+.grid-gallery__item:nth-child(11n+2) {
+  grid-column: span 1;
+  grid-row: 1;
+}
+
+.grid-gallery__item:nth-child(11n+4) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.grid-gallery__item:nth-child(11n+6) {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+.grid-gallery__item:nth-child(11n+7) {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+.grid-gallery__item:nth-child(11n+8) {
+  grid-column: span 2;
+  grid-row: span 3;
+}
+
+.grid-gallery__item:nth-child(11n+9) {
+  grid-row: span 3;
+  grid-column: span 1;
+}
+
+.grid-gallery__image {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 5px;
-  border-top-color: white;
-  cursor: pointer;
-  transition: transform 0.1s ease;  
 }
-
-/* Estilo cuando se hace hover sobre las imágenes */
-.imagen-galeria:hover {
-  transform: scale(1.1);
-}
-.practice_section {
-  background-color: blue;
-  
-  
-}
-
-/* Estilo para el modal */
-.modal {
-    display: flex;
-    position: fixed;
-    z-index: 1;
-    padding-top: 20px;
-    left: 0;
-    top: 0;
-    width: 70%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-
-  /* Estilo para el contenido del modal (imagen) */
-  .modal-content {
-    max-width: 50%; /* Ajusta el ancho máximo del contenido del modal */
-    max-height: 100%; /* Ajusta la altura máxima del contenido del modal */
-    margin: auto;
-    display: flex;
-  }
-
-  /* Estilo para el botón de cerrar el modal */
-  .close {
-    color:black;
-    font-size: 30px;
-    font-weight: bold;
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    cursor: pointer;
-  }
-
 </style>
 
   <!-- bootstrap core css -->
@@ -97,7 +96,12 @@
 
 
   <link rel="stylesheet" href="css/css-circular-prog-bar.css">
-
+  <script>
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true
+    });
+</script>
 
 </head>
 
@@ -153,13 +157,135 @@
   
   <!-- practice section -->
   <section class="practice_section layout_padding">
-    <div class="container">
-      <div class="d-flex flex-column align-items-center">
-        <div id="galeria">
-            <!-- Modal -->
-<div id="modal" class="modal">
-    <span class="close" onclick="cerrarModal()">&times;</span>
-    <img class="modal-content" id="imagenModal">
+    <div class="grid-gallery">
+    <a class="grid-gallery__item" href="#"data-lightbox="gallery">
+      <img class="grid-gallery__image" src="imagen/ftsgaleria/1.jpeg">
+  </a>
+    <a class="grid-gallery__item" href="#" data-lightbox="gallery">
+     <img class="grid-gallery__image" src="imagen/ftsgaleria/2.jpeg">
+</a>
+    <a class="grid-gallery__item" href="#" data-lightbox="gallery">
+     <img class="grid-gallery__image" src="imagen/ftsgaleria/3.jpeg">
+</a>
+    <a class="grid-gallery__item" href="#" data-lightbox="gallery">
+     <img class="grid-gallery__image" src="imagen/ftsgaleria/4.jpeg">
+</a>
+    <a class="grid-gallery__item" href="#"data-lightbox="gallery">
+    <img class="grid-gallery__image" src="imagen/ftsgaleria/5.jpeg">
+</a>
+  <a class="grid-gallery__item" href="#" data-lightbox="gallery">
+      <img class="grid-gallery__image" src="imagen/ftsgaleria/6.jpeg">
+</a>
+  <a class="grid-gallery__item" href="#"data-lightbox="gallery">
+    <img class="grid-gallery__image" src="imagen/ftsgaleria/7.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+    <img class="grid-gallery__image" src="imagen/ftsgaleria/8.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/9.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/10.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/11.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/12.jpeg">
+</a>
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/13.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/14.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/15.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/16.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/17.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/18.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/19.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/20.jpeg">
+</a>
+  <a class="grid-gallery__item" href="#"data-lightbox="gallery">
+      <img class="grid-gallery__image" src="imagen/ftsgaleria/21.jpeg">
+</a>
+  <a class="grid-gallery__item" href="#"data-lightbox="gallery">
+      <img class="grid-gallery__image" src="imagen/ftsgaleria/22.jpeg">
+</a>
+  <a class="grid-gallery__item" href="#"data-lightbox="gallery">
+      <img class="grid-gallery__image" src="imagen/ftsgaleria/23.jpeg">
+</a>
+  <a class="grid-gallery__item" href="#"data-lightbox="gallery">
+      <img class="grid-gallery__image" src="imagen/ftsgaleria/24.jpeg">
+</a>
+  <a class="grid-gallery__item" href="#"data-lightbox="gallery">
+      <img class="grid-gallery__image" src="imagen/ftsgaleria/25.jpeg">
+</a>
+  <a class="grid-gallery__item" href="#"data-lightbox="gallery">
+      <img class="grid-gallery__image" src="imagen/ftsgaleria/26.jpeg">
+</a>
+  <a class="grid-gallery__item" href="#"data-lightbox="gallery">
+    <img class="grid-gallery__image" src="imagen/ftsgaleria/27.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+    <img class="grid-gallery__image" src="imagen/ftsgaleria/28.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/29.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/30.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/31.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/32.jpeg">
+</a>
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/33.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/34.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/35.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/36.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/37.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/38.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/39.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/40.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/41.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/42.jpeg">
+</a>
+<a class="grid-gallery__item" href="#"data-lightbox="gallery">
+  <img class="grid-gallery__image" src="imagen/ftsgaleria/43.jpeg">
+</a>
+      ...
   </div>
   </section>
 
@@ -249,71 +375,11 @@
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
   
   <!-- progreesbar script -->
   <!--Script galeria-->
-  <script>
-    // Arreglo con las URL de las imágenes
-    const imagenes = [
-      'imagen/ftsgaleria/1.jpeg',
-      'imagen/ftsgaleria/2.jpeg',
-      'imagen/ftsgaleria/3.jpeg',
-      'imagen/ftsgaleria/4.jpeg',
-      'imagen/ftsgaleria/5.jpeg',
-      'imagen/ftsgaleria/6.jpeg',
-      'imagen/ftsgaleria/7.jpeg',
-      'imagen/ftsgaleria/8.jpeg',
-      'imagen/ftsgaleria/9.jpeg',
-      'imagen/ftsgaleria/10.png',
-      'imagen/ftsgaleria/11.png',
-      'imagen/ftsgaleria/12.png',
-      'imagen/ftsgaleria/13.jpeg',
-      'imagen/ftsgaleria/14.jpeg',
-      'imagen/ftsgaleria/15.jpeg',
-      
-      // Agrega más rutas de imágenes aquí
-    ];
   
-   
-    // Función para cargar las imágenes en la galería
-  function cargarGaleria() {
-    const galeria = document.getElementById('galeria');
-
-    imagenes.forEach((imagen) => {
-      const img = document.createElement('img');
-      img.src = imagen;
-      img.alt = 'Imagen de la galería';
-      img.classList.add('imagen-galeria', 'lightbox'); // Agregamos la clase "lightbox" aquí
-      galeria.appendChild(img);
-
-      // Agrega un listener para mostrar la imagen ampliada al hacer clic
-      img.addEventListener('click', () => mostrarImagenAmpliada(imagen));
-    });
-  }
-  
-    // Función para mostrar la imagen ampliada en el modal
-    function mostrarImagenAmpliada(rutaImagen) {
-      const modal = document.getElementById('modal');
-      const modalImagen = document.getElementById('imagenModal');
-  
-      modalImagen.src = rutaImagen;
-      modal.style.display = 'flex';
-    }
-  
-    // Función para cerrar el modal
-    function cerrarModal() {
-      const modal = document.getElementById('modal');
-      modal.style.display = 'none';
-    }
-  
-    // Llamamos a la función para cargar la galería cuando la página se carga completamente.
-    window.addEventListener('load', cargarGaleria);
-  </script>
-  <script src="path/to/lightbox.js"></script>
-<script>
-  // Inicializar Lightbox
-  const lightbox = new Lightbox('.lightbox');
-</script>
 </body>
 
 </html>
