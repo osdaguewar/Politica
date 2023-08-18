@@ -41,7 +41,7 @@
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.html">
-            <img id="logoesquina"src="Imagen/logo.jpeg" alt="">
+
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -90,65 +90,58 @@
       <div class="d-flex flex-column align-items-center">
         <p class="heading-text">
           <p class="heading-text">
-            MI COMPAÑIA
+           
          </p>
          <h3 class="text-uppercase">
-             GANAS
+             NUESTROS PROYECTOS
          </h3>
-             </div>
-             <div class="practice_container">
-               <div class="practice_box">
-                 <div class="practice_img-box">
-         <img src="imagen/tarjeta1.png" alt="">
-                 </div>
-                 <h4>
-                     Mi ejemplo a seguir
-         
-                 </h4>
-               </div>
-               <div class="practice_box">
-                   <div class="practice_img-box">
-           <img src="imagen/tarjeta2.png" alt="">
-                   </div>
-                   <h4>
-                       Mi tropa
-                   </h4>
-                 </div>
-                 <div class="practice_box">
-                     <div class="practice_img-box">
-             <img src="imagen/tarjeta3.png" alt="">
-                     </div>
-                     <h4>
-                         My family
-         
-
-                     </h4>
-                   </div>
-                   <div class="practice_box">
-                       <div class="practice_img-box">
-               <img src="imagen/tarjeta4.png" alt="">
-                       </div>
-                       <h4>
-                           Los amigos 
-        
-
-          </h4>
-        </div>
-      </div>
-      <div class="practice_detail">
-        <p>
-          Me dirijo a ustedes con un mensaje de esperanza y determinación. Estoy convencido de que nuestra amada ciudad tiene todo el potencial necesario para convertirse en un referente mundial. Montería posee una riqueza cultural, natural y humana que nos distingue y nos llena de orgullo.
-        <div class="d-flex justify-content-center">
-          <a href="" class="sub_call_to-btn ">
-            <span>
-              Leer mas
-            </span>
-            <img src="imagen/right-arrow.png" alt="">
-          </a>
-        </div>
-      </div>
-
+       </div> 
     </div>
+    <ul class="project-list">
+      <li>
+        <h3>Proyecto 1</h3>
+        <p>Descripción del proyecto 1...</p>
+        <a href="documentos/ACUERDO 022 DEL 23 DE NOVIEMBRE 2018 - VIGENCIA FUTURA - AMPARAR CONTRATO LA PRACTICA DEL FUTBOL CON FUTUROS DEPORTISTAS, AFICIONADOS Y PROFESIONALES-AD.pdf" target="_blank">Ver PDF</a>
+      </li>
+      <li>
+        <h3>Proyecto 2</h3>
+        <p>Descripción del proyecto 1...</p>
+        <a href="documentos/ACUERDO 026 DEL 11 DE DICIEMBRE 2018 - POR LA CUAL SE INSTITUCIONALIZA LA POLITICA PUBLICA BARRAS FIELES FUTBOL EN PAZ-AD.pdf" target="_blank">Ver PDF</a>
+      </li>
+      <li>
+        <h3>Proyecto 3</h3>
+        <p>Descripción del proyecto 1...</p>
+        <a href="documentos/ACUERDO 029 DEL 11 DE DICIEMBRE 2018 - VIGENCIA FUTURAS - APOYO A LA GESTIÓN DE LA PRACTICA DEL BÉISBOL CON FUTUROS DEPORTISTAS-AD.pdf" target="_blank">Ver PDF</a>
+      </li>
+      <li>
+        <h3>Proyecto 4</h3>
+        <p>Descripción del proyecto 1...</p>
+        <a href="documentos/ACUERDO 040 DEL 12 DE DICIEMBRE 2018 - SE DEFINEN FACTORES DE SUBSIDIO DIFERENCIAL PARA LOS USUARIOS DEL SERVICIO DE ASEO EN LA ZONA RURAL-AD.pdf" target="_blank">Ver PDF</a>
+      </li>
+      <li>
+        <h3>Proyecto 5</h3>
+        <p>Descripción del proyecto 1...</p>
+        <a href="documentos/ACUERDO No 005 DE 28 DE FEBRERO 2017 - TODOS A LA U-AD CREA EL FONDO DE EDUCACIÓN.pdf" target="_blank">Ver PDF</a>
+      </li>
+      <li>
+        <h3>Proyecto 6</h3>
+        <p>Descripción del proyecto 1...</p>
+        <a href="documentos/ACUERDO No 042 DE 10 OCT. 2017 - MODIFICA VILLA OLIMPICA-AD.pdf" target="_blank">Ver PDF</a>
+      </li>
+      <li>
+        <h3>Proyecto 7</h3>
+        <p>Descripción del proyecto 1...</p>
+        <a href="documentos/ACUERDO No 072 DE 20 DIC. 2017 - PLAN DPTAL DE AGUA-AD.pdf" target="_blank">Ver PDF</a>
+      </li>
+      <li>
+        <h3>Proyecto 8</h3>
+        <p>Descripción del proyecto 1...</p>
+        <a href="documentos/ACUERDO N° 021 DEL 09 DE DICIEMBRE 2019- CENTRO ESPIRITU DE DIOS-ADULTO MAYOR-AD.pdf" target="_blank">Ver PDF</a>
+      </li>
+      
+      <!-- Agregar más proyectos similares aquí -->
+    </ul>
+    
   </section>
 
 
@@ -163,7 +156,7 @@
             AD
           </h2>
           <p>
-            Aqui queremos contruir de la mano contigo, dejanos tu correo 
+            Queremos contruir de la mano contigo, dejanos tu correo 
           </p>
         </div>
         <div class="col-md-4 info_address">
@@ -236,6 +229,21 @@
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <!-- progreesbar script -->
+
+  </script>
+  <script>
+    const projectItems = document.querySelectorAll('.project-list li');
+
+projectItems.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    item.style.transform = 'scale(1.05)';
+    item.style.transition = 'transform 0.3s ease-in-out';
+  });
+
+  item.addEventListener('mouseout', () => {
+    item.style.transform = 'scale(1)';
+  });
+});
 
   </script>
 </body>

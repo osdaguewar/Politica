@@ -119,14 +119,6 @@ h4 {
   transition: background-color 0.3s, border-color 0.3s, opacity 0.3s;
 }
 
-/* Agregar margen superior a la sección siguiente */
-.section-bajo-navbar {
-  margin-top: 100px; /* Ajusta el valor según el espacio deseado */
-}
-
-
-
-
 a,
 a:hover,
 a:focus {
@@ -144,10 +136,14 @@ a:focus {
   box-shadow: none;
 }
 
-.top_container {}
+.top_container {
+  margin-top: 9%;
+  
+}
 
 .top_container.sub_page {
   height: auto;
+  
 }
 
 
@@ -218,6 +214,19 @@ a:focus {
     height: 30%; /* Ajusta la altura en dispositivos móviles */
     opacity: 0.5; /* Cambia la opacidad en dispositivos móviles si lo deseas */
   }
+}
+.hero_section-container {
+  position: relative;
+}
+
+.hero_background-link {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .number-container {
@@ -678,3 +687,18 @@ div.container-fluid {
   padding: 10px; /* Ejemplo: Añade un poco de espacio alrededor del elemento */
   /* Agrega más propiedades según tus necesidades */
 }
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35%, 1fr));
+  gap: 20px;
+}
+
+.project-list li {
+  background-color: rgb(217, 221, 245);;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+
+
+
