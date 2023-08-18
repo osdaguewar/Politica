@@ -31,26 +31,54 @@
     height: 100%;
     object-fit: cover;
   }
+  
  .gallery{
   width: 85%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 
-  background-color: rgb(69, 42, 165);
+  
   display: grid;
   grid-template-columns: repeat(auto-fit, 133px);
   grid-auto-rows: 200px;
   justify-content: center;
+  gap: 1rem;
  }
+ .titlega{
+  text-align: center;
+  padding: 2.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-decoration: underline;
+  text-decoration-color: blue;
+  font-size: 2.4rem;
+  font-family:  sans-serif;
+}
  .gallery__item{
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   grid-column:  span 2;
   height: 283px;
+  transition: 0.5s filter;
+ }
+ .gallery__item:hover{
+  filter:brightness(0.3)
  }
  .gallery__item:first-of-type{
-  grid-column: 2 / span 2;
+  grid-column: 1 / span 2;
  }
+ 
+
+/*Media queries*/
+@media screen and (min-width:244px) and(max-width:640px) {
+  .gallery__item:first-of-type {
+    grid-column: 1/span 2;
+  }
+  .gallery{
+    grid-auto-rows:283px;
+  }
+  
+}
 </style>
 
   <!-- bootstrap core css -->
@@ -128,9 +156,7 @@
   
   <!-- practice section -->
   <section class="practice_section layout_padding">
-    <h2>
-      Galeria mela
-    </h2>
+    <h1 class="titlega">"Galeria mela"</h1>
     <main class="gallery">
       <div class="gallery__item">
         <img src="imagen/ftsgaleria/1.jpeg" alt="">
