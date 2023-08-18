@@ -20,66 +20,37 @@
   <title>AD</title>
 
 <style>
-  .grid-gallery {
+  *,*::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+ .gallery{
+  width: 85%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: rgb(69, 42, 165);
   display: grid;
+  grid-template-columns: repeat(auto-fit, 133px);
   grid-auto-rows: 200px;
-  gap: 1rem;
-  grid-auto-flow: row dense;
-}
-
-@media all and (min-width: 320px) {
-  .grid-gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media all and (min-width: 768px) {
-  .grid-gallery {
-    grid-template-columns: repeat(3, 3fr);
-  }
-}
-
-@media all and (min-width: 1024px) {
-  .grid-gallery {
-    grid-template-columns: repeat(6, 2fr);
-  }
-}
-
-.grid-gallery__item:nth-child(11n+2) {
-  grid-column: span 1;
-  grid-row: 1;
-}
-
-.grid-gallery__item:nth-child(11n+4) {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-.grid-gallery__item:nth-child(11n+6) {
-  grid-column: span 3;
-  grid-row: span 2;
-}
-
-.grid-gallery__item:nth-child(11n+7) {
-  grid-column: span 3;
-  grid-row: span 2;
-}
-
-.grid-gallery__item:nth-child(11n+8) {
-  grid-column: span 2;
-  grid-row: span 3;
-}
-
-.grid-gallery__item:nth-child(11n+9) {
-  grid-row: span 3;
-  grid-column: span 1;
-}
-
-.grid-gallery__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+  justify-content: center;
+ }
+ .gallery__item{
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  grid-column:  span 2;
+  height: 283px;
+ }
+ .gallery__item:first-of-type{
+  grid-column: 2 / span 2;
+ }
 </style>
 
   <!-- bootstrap core css -->
@@ -157,135 +128,75 @@
   
   <!-- practice section -->
   <section class="practice_section layout_padding">
-    <div class="grid-gallery">
-    <a class="grid-gallery__item" href="#"data-lightbox="gallery">
-      <img class="grid-gallery__image" src="imagen/ftsgaleria/1.jpeg">
-  </a>
-    <a class="grid-gallery__item" href="#" data-lightbox="gallery">
-     <img class="grid-gallery__image" src="imagen/ftsgaleria/2.jpeg">
-</a>
-    <a class="grid-gallery__item" href="#" data-lightbox="gallery">
-     <img class="grid-gallery__image" src="imagen/ftsgaleria/3.jpeg">
-</a>
-    <a class="grid-gallery__item" href="#" data-lightbox="gallery">
-     <img class="grid-gallery__image" src="imagen/ftsgaleria/4.jpeg">
-</a>
-    <a class="grid-gallery__item" href="#"data-lightbox="gallery">
-    <img class="grid-gallery__image" src="imagen/ftsgaleria/5.jpeg">
-</a>
-  <a class="grid-gallery__item" href="#" data-lightbox="gallery">
-      <img class="grid-gallery__image" src="imagen/ftsgaleria/6.jpeg">
-</a>
-  <a class="grid-gallery__item" href="#"data-lightbox="gallery">
-    <img class="grid-gallery__image" src="imagen/ftsgaleria/7.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-    <img class="grid-gallery__image" src="imagen/ftsgaleria/8.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/9.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/10.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/11.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/12.jpeg">
-</a>
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/13.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/14.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/15.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/16.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/17.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/18.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/19.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/20.jpeg">
-</a>
-  <a class="grid-gallery__item" href="#"data-lightbox="gallery">
-      <img class="grid-gallery__image" src="imagen/ftsgaleria/21.jpeg">
-</a>
-  <a class="grid-gallery__item" href="#"data-lightbox="gallery">
-      <img class="grid-gallery__image" src="imagen/ftsgaleria/22.jpeg">
-</a>
-  <a class="grid-gallery__item" href="#"data-lightbox="gallery">
-      <img class="grid-gallery__image" src="imagen/ftsgaleria/23.jpeg">
-</a>
-  <a class="grid-gallery__item" href="#"data-lightbox="gallery">
-      <img class="grid-gallery__image" src="imagen/ftsgaleria/24.jpeg">
-</a>
-  <a class="grid-gallery__item" href="#"data-lightbox="gallery">
-      <img class="grid-gallery__image" src="imagen/ftsgaleria/25.jpeg">
-</a>
-  <a class="grid-gallery__item" href="#"data-lightbox="gallery">
-      <img class="grid-gallery__image" src="imagen/ftsgaleria/26.jpeg">
-</a>
-  <a class="grid-gallery__item" href="#"data-lightbox="gallery">
-    <img class="grid-gallery__image" src="imagen/ftsgaleria/27.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-    <img class="grid-gallery__image" src="imagen/ftsgaleria/28.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/29.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/30.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/31.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/32.jpeg">
-</a>
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/33.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/34.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/35.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/36.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/37.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/38.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/39.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/40.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/41.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/42.jpeg">
-</a>
-<a class="grid-gallery__item" href="#"data-lightbox="gallery">
-  <img class="grid-gallery__image" src="imagen/ftsgaleria/43.jpeg">
-</a>
-      ...
+    <h2>
+      Galeria mela
+    </h2>
+    <main class="gallery">
+      <div class="gallery__item">
+        <img src="imagen/ftsgaleria/1.jpeg" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="imagen/ftsgaleria/1.jpeg" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="imagen/ftsgaleria/1.jpeg" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="imagen/ftsgaleria/1.jpeg" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="imagen/ftsgaleria/1.jpeg" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="imagen/ftsgaleria/1.jpeg" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="imagen/ftsgaleria/1.jpeg" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="imagen/ftsgaleria/1.jpeg" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="imagen/ftsgaleria/1.jpeg" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="imagen/ftsgaleria/1.jpeg" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="imagen/ftsgaleria/1.jpeg" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="imagen/ftsgaleria/1.jpeg" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="imagen/ftsgaleria/1.jpeg" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="imagen/ftsgaleria/1.jpeg" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="imagen/ftsgaleria/1.jpeg" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="imagen/ftsgaleria/1.jpeg" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="imagen/ftsgaleria/1.jpeg" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="imagen/ftsgaleria/1.jpeg" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="imagen/ftsgaleria/1.jpeg" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="imagen/ftsgaleria/1.jpeg" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="imagen/ftsgaleria/1.jpeg" alt="">
+      </div>
+      
+    </main>
   </div>
   </section>
 
