@@ -58,7 +58,7 @@
  .gallery__item{
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   grid-column:  span 2;
-  height: 283px;
+  height: 215px;
   transition: 0.5s filter;
  }
  .gallery__item:hover{
@@ -70,14 +70,24 @@
  
 
 /*Media queries*/
-@media screen and (min-width:244px) and(max-width:640px) {
+@media screen and (min-width:344px) and(max-width:684px) {
   .gallery__item:first-of-type {
-    grid-column: 1/span 2;
+    grid-column: 1 /span 2;
   }
   .gallery{
-    grid-auto-rows:283px;
+    grid-auto-rows: 215px;
   }
   
+}
+/*Media queries2*/
+@media screen and (min-width:704px) and(max-width:856px) {
+  .gallery__item:first-of-type(odd){
+    grid-column: 2 / span 2;
+  }
+  .gallery{
+    grid-auto-rows: 215px;
+  }
+ 
 }
 </style>
 
