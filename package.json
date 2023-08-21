@@ -1,7 +1,6 @@
 {
   "name": "politica",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +18,10 @@
   "dependencies": {
     "jquery": "^3.7.0",
     "lightbox2": "^2.11.4"
-  }
+  },
+  "devDependencies": {
+    "sass": "^1.66.1"
+  },
+  "keywords": [],
+  "description": ""
 }

@@ -16,78 +16,66 @@
   <link href="path/to/lightbox.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/galeria.js"></script>
 
   <title>AD</title>
 
-<style>
-  *,*::before, *::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-  }
-  img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
- .gallery{
-  width: 85%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-
-  
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 133px);
-  grid-auto-rows: 200px;
-  justify-content: center;
-  gap: 1rem;
- }
- .titlega{
-  text-align: center;
-  padding: 2.5rem 0;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  text-decoration: underline;
-  text-decoration-color: blue;
-  font-size: 2.4rem;
-  font-family:  sans-serif;
+  <style>
+    div#carousel { 
+  perspective: 1200px; 
+  background: #101cc7; 
+  padding-top: 10%; 
+  font-size:0; 
+  margin-bottom: -9rem; 
+  overflow: hidden; 
 }
- .gallery__item{
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-  grid-column:  span 2;
-  height: 215px;
-  transition: 0.5s filter;
- }
- .gallery__item:hover{
-  filter:brightness(0.3)
- }
- .gallery__item:first-of-type{
-  grid-column: 1 / span 2;
- }
- 
-
-/*Media queries*/
-@media screen and (min-width:344px) and(max-width:684px) {
-  .gallery__item:first-of-type {
-    grid-column: 1 /span 2;
-  }
-  .gallery{
-    grid-auto-rows: 215px;
-  }
-  
+figure#spinner { 
+  transform-style: preserve-3d; 
+  height: 700px; 
+  transform-origin: 50% 50% -500px; 
+  transition: 1s; 
+} 
+figure#spinner img { 
+  width: 100%; max-width: 410px; 
+  position: absolute; left: 38%;
+  transform-origin: 50% 50% -500px;
+  outline:1px solid transparent; 
 }
-/*Media queries2*/
-@media screen and (min-width:704px) and(max-width:856px) {
-  .gallery__item:first-of-type(odd){
-    grid-column: 2 / span 2;
+figure#spinner img:nth-child(1) { transform:rotateY(0deg); 
+}
+figure#spinner img:nth-child(2) { transform: rotateY(-45deg); }
+figure#spinner img:nth-child(3) { transform: rotateY(-90deg); }
+figure#spinner img:nth-child(4) { transform: rotateY(-135deg); }
+figure#spinner img:nth-child(5){ transform: rotateY(-180deg); }
+figure#spinner img:nth-child(6){ transform: rotateY(-225deg); }
+figure#spinner img:nth-child(7){ transform: rotateY(-270deg); }
+figure#spinner img:nth-child(8){ transform: rotateY(-315deg); }
+div#carousel ~ span { 
+  color: #ffffff; 
+  margin: 0%; 
+  display: inline-block; 
+  text-decoration: none; 
+  font-size: 6rem; 
+  transition: 0.9s color; 
+  position: relative; 
+  margin-top: -6rem; 
+  border-bottom: none; 
+  line-height: 0; }
+div#carousel ~ span:hover { color: #888; cursor: pointer; }
+/* Estilos por defecto */
+figure#spinner img {
+  width: 100%;
+  max-width: 410px;
+  position: absolute;
+  left: 38%;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+  figure#spinner img {
+    max-width: 100%;
+    left: 0;
   }
-  .gallery{
-    grid-auto-rows: 215px;
-  }
- 
 }
 </style>
 
@@ -104,13 +92,7 @@
 
 
 
-  <link rel="stylesheet" href="css/css-circular-prog-bar.css">
-  <script>
-    lightbox.option({
-        'resizeDuration': 200,
-        'wrapAround': true
-    });
-</script>
+ 
 
 </head>
 
@@ -158,82 +140,28 @@
             </div>
         </nav>
       </div>
+      
     </header>
-
-  </div>
   <!-- end header section -->
 
   
   <!-- practice section -->
   <section class="practice_section layout_padding">
-    <h1 class="titlega">"Galeria mela"</h1>
-    <main class="gallery">
-      <div class="gallery__item">
-        <img src="imagen/ftsgaleria/1.jpeg" alt="">
-      </div>
-      <div class="gallery__item">
-        <img src="imagen/ftsgaleria/1.jpeg" alt="">
-      </div>
-      <div class="gallery__item">
-        <img src="imagen/ftsgaleria/1.jpeg" alt="">
-      </div>
-      <div class="gallery__item">
-        <img src="imagen/ftsgaleria/1.jpeg" alt="">
-      </div>
-      <div class="gallery__item">
-        <img src="imagen/ftsgaleria/1.jpeg" alt="">
-      </div>
-      <div class="gallery__item">
-        <img src="imagen/ftsgaleria/1.jpeg" alt="">
-      </div>
-      <div class="gallery__item">
-        <img src="imagen/ftsgaleria/1.jpeg" alt="">
-      </div>
-      <div class="gallery__item">
-        <img src="imagen/ftsgaleria/1.jpeg" alt="">
-      </div>
-      <div class="gallery__item">
-        <img src="imagen/ftsgaleria/1.jpeg" alt="">
-      </div>
-      <div class="gallery__item">
-        <img src="imagen/ftsgaleria/1.jpeg" alt="">
-      </div>
-      <div class="gallery__item">
-        <img src="imagen/ftsgaleria/1.jpeg" alt="">
-      </div>
-      <div class="gallery__item">
-        <img src="imagen/ftsgaleria/1.jpeg" alt="">
-      </div>
-      <div class="gallery__item">
-        <img src="imagen/ftsgaleria/1.jpeg" alt="">
-      </div>
-      <div class="gallery__item">
-        <img src="imagen/ftsgaleria/1.jpeg" alt="">
-      </div>
-      <div class="gallery__item">
-        <img src="imagen/ftsgaleria/1.jpeg" alt="">
-      </div>
-      <div class="gallery__item">
-        <img src="imagen/ftsgaleria/1.jpeg" alt="">
-      </div>
-      <div class="gallery__item">
-        <img src="imagen/ftsgaleria/1.jpeg" alt="">
-      </div>
-      <div class="gallery__item">
-        <img src="imagen/ftsgaleria/1.jpeg" alt="">
-      </div>
-      <div class="gallery__item">
-        <img src="imagen/ftsgaleria/1.jpeg" alt="">
-      </div>
-      <div class="gallery__item">
-        <img src="imagen/ftsgaleria/1.jpeg" alt="">
-      </div>
-      <div class="gallery__item">
-        <img src="imagen/ftsgaleria/1.jpeg" alt="">
-      </div>
-      
-    </main>
-  </div>
+    <div id="carousel">
+      <figure id="spinner">
+        <img src="imagen/ftsgaleria/1.jpeg" alt>
+        <img src="imagen/ftsgaleria/2.jpeg" alt>
+        <img src="imagen/ftsgaleria/17.jpeg" alt>
+        <img src="imagen/ftsgaleria/24.jpeg" alt>
+        <img src="imagen/ftsgaleria/5.jpeg" alt>
+        <img src="imagen/ftsgaleria/22.jpeg" alt>
+        <img src="imagen/ftsgaleria/27.jpeg" alt>
+        <img src="imagen/ftsgaleria/32.jpeg" alt>    
+      </figure>
+    </div>
+    <span style="float:left" class="ss-icon" onclick="galleryspin('-')">&lt;</span>
+    <span style="float:right" class="ss-icon" onclick="galleryspin('')">&gt;</span>
+        
   </section>
 
 
