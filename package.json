@@ -19,9 +19,6 @@
     "jquery": "^3.7.0",
     "lightbox2": "^2.11.4"
   },
-  "devDependencies": {
-    "sass": "^1.66.1"
-  },
   "keywords": [],
   "description": ""
 }
