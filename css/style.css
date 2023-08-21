@@ -76,9 +76,6 @@ h4 {
 .top_container {
   font-family: 'Poppins', sans-serif;
 }
-
-.header_section {}
-
 .navbar.navbar-expand-lg {
   background-image: url('/imagen/navbconcejo.jpg');
   background-size: 30% 100%; /* Cambiar el valor de 40% para ajustar el tamaño de la imagen */
@@ -89,7 +86,6 @@ h4 {
 
  /* Estilos para el navbar con imagen de fondo */
 .navbar.navbar-expand-lg {
-  background-image: url('/imagen/navbconcejo.jpg');
   background-size: 30% 100%;
   background-repeat: no-repeat;
   background-position: left center;
