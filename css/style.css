@@ -585,34 +585,6 @@ nav{
   color: #000;
 }
 
-/* end footer section*/
-/* Estilos para dispositivos móviles */
-@media (max-width: 768px) {
-  .footer_section {
-    padding: 10px 0; /* Reduce el padding vertical */
-    font-size: 12px; /* Reduce el tamaño de fuente */
-  
-  .hero_section-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero_img-box {
-    width: 80%;
-  }
-
-  .hero_detail-box {
-    width: 80%;
-  }
-
-  .carousel-control-prev {
-    left: 15px;
-  }
-
-  .carousel-control-next {
-    left: 65px;
-  }
-}
 
 /* Estilos para el reproductor de audio */
 #AudioAD {
@@ -623,7 +595,7 @@ nav{
 
 /* Estilos para los controles del reproductor */
 #AudioAD::-webkit-media-controls-panel {
-  background-color: #0000FF;
+  background-color: #0909f8;
   border-radius: 10px;
 
 }
@@ -708,4 +680,7 @@ div.container-fluid {
   border-radius: 10px;
   padding: 20px;
 }
-}
+ 
+
+
+
