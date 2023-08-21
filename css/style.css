@@ -665,6 +665,7 @@ div.container-fluid {
   padding: 10px; /* Ejemplo: Añade un poco de espacio alrededor del elemento */
   /* Agrega más propiedades según tus necesidades */
 }
+
 .project-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(35%, 1fr));

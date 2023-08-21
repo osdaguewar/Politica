@@ -16,9 +16,11 @@
   },
   "homepage": "https://github.com/osdaguewar/Politica#readme",
   "dependencies": {
+    "bootstrap": "^5.3.1",
     "jquery": "^3.7.0",
     "lightbox2": "^2.11.4"
   },
   "keywords": [],
+  "devDependencies": {},
   "description": ""
 }
