@@ -77,9 +77,7 @@ h4 {
   font-family: 'Poppins', sans-serif;
 }
 
-.header_section {
- 
-}
+.header_section {}
 
 .navbar.navbar-expand-lg {
   background-image: url('/imagen/navbconcejo.jpg');
@@ -101,7 +99,7 @@ h4 {
   top: 0;
   width: 100%;
   z-index: 999;
-}
+} /* Media query navb */
 @media (max-width: 768px) {
   .navbar.navbar-expand-lg {
     background-size: 100% auto; /* Cambia el tamaño de la imagen para que se ajuste al ancho del navbar */
@@ -112,6 +110,7 @@ h4 {
     color: black; /* Cambia el color del texto para que sea legible en la imagen de fondo */
   }
 }
+
 
 /* Estilos para los enlaces del navbar */
 .custom_nav-container.navbar-expand-lg .navbar-nav .nav-link {
@@ -589,8 +588,9 @@ nav{
 /* end footer section*/
 /* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
-  /* Agrega aquí los estilos que deseas aplicar para pantallas de hasta 768px */
-  /* Por ejemplo: */
+  .footer_section {
+    padding: 10px 0; /* Reduce el padding vertical */
+    font-size: 12px; /* Reduce el tamaño de fuente */
   
   .hero_section-container {
     flex-direction: column;
