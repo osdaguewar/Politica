@@ -5,11 +5,16 @@ body {
 
 
 
-h1,
-h2,
-h3,
-h4 {
+/* Estilos base para los encabezados h1, h2, h3, h4 */
+h1, h2, h3, h4 {
   font-weight: bold;
+}
+
+/* Media query para hacer los encabezados responsivos en dispositivos móviles */
+@media (max-width: 768px) {
+  h1, h2, h3, h4 {
+    font-size: 24px; /* Reducir el tamaño de fuente para pantallas más pequeñas */
+  }
 }
 
 .layout_padding {
@@ -197,29 +202,16 @@ a:focus {
   align-items: center;
   position: relative; /* Agregar esta propiedad para posicionar el pseudoelemento */
 }
-
-/* Pseudoelemento ::before para aplicar opacidad a la imagen de fondo */
-.hero_section-container::before {
-  content: ""; /* Necesario para que el pseudoelemento funcione */
-  position: absolute; /* Posicionamos el pseudoelemento por encima del contenido */
-  top: 20%;
-  left: 50%;
-  width: 50%;
-  height: 50%;
-  background-image: url('../imagen/MarcaAgua.jpg');
-  opacity: 0.3; /* Valor entre 0 (completamente transparente) y 1 (completamente opaco) */
-  z-index: -1; /* Enviamos el pseudoelemento detrás del contenido del contenedor */
-  
-  /* Otras propiedades opcionales para personalizar el fondo */
-  background-repeat: no-repeat; /* Para evitar que se repita la imagen */
-  background-position:center; /* Para centrar la imagen en el contenedor */
-  @media (max-width: 768px) {
-    top: 10%; /* Ajusta la posición superior en dispositivos móviles */
-    width: 80%; /* Ajusta el ancho en dispositivos móviles */
-    height: 30%; /* Ajusta la altura en dispositivos móviles */
-    opacity: 0.5; /* Cambia la opacidad en dispositivos móviles si lo deseas */
+/* Media query para hacer la sección hero responsive */
+@media (max-width: 768px) {
+  .hero_section-container {
+    width: 90%; /* Reducir el ancho para pantallas más pequeñas */
+    flex-direction: column; /* Cambiar a una disposición en columna */
+    align-items: flex-start; /* Alinear elementos al inicio */
+    padding: 20px 0; /* Agregar un espaciado interior */
   }
 }
+
 .hero_section-container {
   position: relative;
 }
@@ -232,6 +224,7 @@ a:focus {
   width: 100%;
   height: 100%;
   z-index: -1;
+  background-color: green;
 }
 
 .number-container {
@@ -260,6 +253,7 @@ a:focus {
 .hero_section-container .hero_img-box {
   width: 42%;
   margin-top: -45px;
+  
 }
 
 .hero_section-container .hero_img-box img {
@@ -340,6 +334,10 @@ a:focus {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
+}
+.practice_section{
+  background-color: rgb(9, 22, 121);;
 }
 
 .practice_box {
@@ -680,4 +678,12 @@ div.container-fluid {
  
 
 
+#contenedorproyectos{
 
+background-repeat: no-repeat;
+width:100%;
+height: 100%;
+}
+ html{
+  background-color: rgb(9, 22, 121);;
+ }
