@@ -195,22 +195,37 @@ a:focus {
 /*end header section*/
 
 /* hero section */
-.hero_section-container {
-  width: 80%;
-  margin: 0 auto;
+
+.hero_detail-box {
+  height: 600px; /* Altura fija del contenedor */
+  overflow: hidden; /* Ocultar contenido que exceda la altura */
+}
+.hero_detail-container {
+  width: 100%; /* Asegurarse de que ocupe todo el ancho del contenedor */
+  height: 100%; /* Asegurarse de que ocupe toda la altura del contenedor */
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  position: relative; /* Agregar esta propiedad para posicionar el pseudoelemento */
+  text-align: center;
+  padding: 20px;
 }
-/* Media query para hacer la sección hero responsive */
-@media (max-width: 768px) {
-  .hero_section-container {
-    width: 90%; /* Reducir el ancho para pantallas más pequeñas */
-    flex-direction: column; /* Cambiar a una disposición en columna */
-    align-items: flex-start; /* Alinear elementos al inicio */
-    padding: 20px 0; /* Agregar un espaciado interior */
-  }
+
+/* Estilos para el fondo de .hero_section-container */
+.hero_section-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 60%;
+  background-image: url(../imagen/ftsgaleria/2.jpeg);
+  background-size: cover;
+  /* Agrega aquí los estilos específicos que desees para el fondo */
+  opacity: 1; /* Ejemplo: Reduce la opacidad del fondo */
 }
+
+
 
 .hero_section-container {
   position: relative;
@@ -275,35 +290,39 @@ a:focus {
 
 
 
+/* Estilos para los controles previos y siguientes del carrusel */
 .carousel-control-prev,
 .carousel-control-next {
   width: 5.5%;
   height: 13%;
   border-radius: 100%;
   background-color: #3c8bf3;
-  opacity: 1;
+  opacity: 0.1;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 8px;
-  top: initial;
-  bottom: -15%;
+  position: absolute;
+  top: 50%; /* Centra verticalmente los controles */
+  transform: translateY(-50%); /* Alinea verticalmente los controles */
 }
 
+/* Estilos de hover para los controles */
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
   background-color: #464646;
 }
 
-
-
+/* Estilos específicos para el control previo */
 .carousel-control-prev {
   background-image: url(../imagen/left-arrow.png);
-  left: 45px;
+  left: 20px; /* Ajusta la posición izquierda según tus necesidades */
 }
 
+/* Estilos específicos para el control siguiente */
 .carousel-control-next {
+  opacity: 0.1;
   background-image: url(../imagen/right-arrow.png);
-  left: 95px;
+  right: 20px; /* Ajusta la posición derecha según tus necesidades */
 }
 
 /* end hero section */
@@ -686,3 +705,7 @@ height: 100%;
  html{
   background-color: rgb(9, 22, 121);;
  }
+ 
+
+
+
