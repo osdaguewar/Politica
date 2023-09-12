@@ -83,7 +83,7 @@ h1, h2, h3, h4 {
 }
 .navbar.navbar-expand-lg {
   background-image: url('/imagen/navbconcejo.jpg');
-  background-size: 30% 100%; /* Cambiar el valor de 40% para ajustar el tamaño de la imagen */
+  background-size: 30% 100%; /* Cambiar el valor de 30% para ajustar el tamaño de la imagen */
   background-repeat: no-repeat;
   background-position: left center; /* Alinea la imagen a la izquierda del navbar */
   opacity: 0.9; /* Ajusta el valor de opacidad según tus preferencias */
@@ -221,7 +221,6 @@ a:focus {
   left: 60%;
   background-image: url(../imagen/ftsgaleria/2.jpeg);
   background-size: cover;
-  /* Agrega aquí los estilos específicos que desees para el fondo */
   opacity: 1; /* Ejemplo: Reduce la opacidad del fondo */
 }
 
@@ -599,65 +598,37 @@ nav{
 
 
 /* Estilos para el reproductor de audio */
-#AudioAD {
-  width: 50%;
-  max-width: 200px;
-  margin: 1 auto;   
-}
-
-/* Estilos para los controles del reproductor */
-#AudioAD::-webkit-media-controls-panel {
-  background-color: #0909f8;
-  border-radius: 10px;
-
-}
-
-#AudioAD::-webkit-media-controls-play-button,
-#AudioAD::-webkit-media-controls-pause-button {
-  font-size: 24px;
-}
-
-#AudioAD::-webkit-media-controls-volume-slider {
-  width: 60%;
-}
-/* Estilos para el contenedor del widget */
-.fb-page {
+.audio-player {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border-radius: 5px;
 }
 
-/* Estilos para el enlace del widget */
-.fb-xfbml-parse-ignore a {
-  text-decoration: none;
-  color: #1877f2; /* Color azul de Facebook */
-  font-weight: bold;
+/* Estilos para cada elemento de audio */
+.audio-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Estilos para el enlace del widget al pasar el cursor */
-.fb-xfbml-parse-ignore a:hover {
-  text-decoration: underline;
+/* Estilos para el reproductor Plyr */
+.plyr {
+  max-width: 400px; /* Ajusta el ancho del reproductor según tu diseño */
+  margin: 20px;
 }
 
-/* Estilos para el bloque de cita en el widget */
-.fb-xfbml-parse-ignore blockquote {
-  margin: 10px 0;
-  padding: 0;
-  font-size: 16px;
+/* Estilos para los controles del reproductor Plyr */
+.plyr__controls {
+  background-color: #333; /* Cambia el fondo de los controles */
 }
 
-/* Estilos para el encabezado pequeño */
-.fb-page[data-small-header="true"] .fb-xfbml-parse-ignore blockquote {
-  font-size: 14px;
+.plyr__play {
+  font-size: 24px; /* Cambia el tamaño del botón de reproducción */
+  color: #fff; /* Cambia el color del botón de reproducción */
 }
 
-/* Estilos para las caras de los amigos */
-.fb-page[data-show-facepile="true"] .fb-xfbml-parse-ignore blockquote {
-  margin-top: 20px;
+.plyr__volume input[type="range"] {
+  width: 100px; /* Cambia el ancho del control de volumen */
 }
 /* Agregar animaciones a elementos con la clase "scroll-fade-up" */
 .scroll-fade-up {
@@ -684,7 +655,7 @@ div.container-fluid {
 
 .project-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(35%, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
   gap: 20px;
 }
 
